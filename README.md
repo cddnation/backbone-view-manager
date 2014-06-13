@@ -8,21 +8,23 @@ How to use
 
 A typical rendering of a view would look like this:
 
-    demoView = new DemoView({...});
+    var demoView = new DemoView({...});
     this.$el.append(demoView.render().el);
 
 How to initiate the view manager
 
-    demoView = ViewsManager.ViewCreate('demoView', function () {
+    var demoView = ViewsManager.ViewCreate('demoView', function () {
         return new DemoView({...});
     });
+    
     this.$el.append(demoView.render().el);
     
 Or re-use existing view
 
-    demoView = ViewsManager.ViewReuse('demoView', function () {
+    var demoView = ViewsManager.ViewReuse('demoView', function () {
         return new DemoView({...});
     });
+    
     this.$el.append(demoView.render().el);
     
 Kill a view
